@@ -61,6 +61,7 @@ h1, h2, h3{
 
 .week-display img:hover{
 	box-shadow: 5px 5px 15px #001433;
+	border:none;
 }
 
 .caption{
