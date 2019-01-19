@@ -59,9 +59,12 @@ h1, h2, h3{
 	border: 1px solid #000033;
 }
 
+.week-display img:hover{
+	box-shadow: 5px 5px 15px #001433;
+}
+
 .week-display:hover{
 	transform:scale(1.05);
-	box-shadow: 5px 10px;
 }
 
 .caption{
