@@ -28,6 +28,7 @@
       <div class="intro-area">
         This is a website! Why does this website exist, you ask? It's an assignment! I may be a professional web developer, but when a professor says "build a website" I say, "will do, but what are the requirements?" And then I follow those requirements with exactness.
       </div>
+      <h2>ASSIGNMENTS</h2>
       <ul class="weeks-display">
       <?=$week_display?>
       </ul>
