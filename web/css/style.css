@@ -54,7 +54,7 @@ h1, h2, h3{
 }
 
 .week-display img{
-	width:70%;
+	transform: scale(0.7);
 }
 
 .caption{
