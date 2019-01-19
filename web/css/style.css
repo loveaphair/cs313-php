@@ -36,6 +36,21 @@ h1, h2, h3{
 .content-area{
 	margin-top:40px;
 	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	align-content:space-around;
+}
+
+.weeks-display{
+	width:100%;
+	list-style-type: none;
+	display:inline-block;
+}
+
+.week-display{
+	flex-basis:31%;
+	margin:2px;
 }
 
 

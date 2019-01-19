@@ -1,3 +1,13 @@
+<?php
+  $weeks = [
+    'week2' => ['img_src' => 'images/week2_tn.png',
+                'caption' => 'Week 2 Team Assignment',
+                'Description' => 'Three interactive buttons']
+  ];
+  foreach($weeks as $week){
+    $week_display .= "<li class='week-display'><img src='{$week['img_src']}'><br><h4>{$week['caption']}</h4></li>";
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +24,9 @@
     <h1 class="indent title-text">Kevin Phair - CS313</title>
     <h3 class="indent subtitle-text">Professional Student-Level Web Design</h3>
     <div class="content-area">
+      <ul class="weeks-display">
+      <?=$week_display?>
+      </ul>
     </div>
   </div>
 </body>
