@@ -33,17 +33,8 @@ h1, h2, h3{
 	margin-top:-50px;
 }
 
-.content-area{
-	margin-top:40px;
-	width:100%;
-}
-
 
 /* Assignment Specific Classes */
-.assignment-body{
-	background-color:#FFF;
-	font-family:sans-serif;
-}
 .clicky-areas > div{
 	height: 30px;
 	width: 60px;
