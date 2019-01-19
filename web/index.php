@@ -2,10 +2,11 @@
   $weeks = [
     'week2' => ['img_src' => 'images/week2_tn.png',
                 'caption' => 'Week 2 Team Assignment',
-                'Description' => 'Three interactive buttons']
+                'Description' => 'Three interactive buttons',
+                'href' => '/hello.html' ]
   ];
   foreach($weeks as $week){
-    $week_display .= "<li class='week-display'><img src='{$week['img_src']}'><br><h4>{$week['caption']}</h4></li>";
+    $week_display .= "<li class='week-display'><a href='{$week['href']}'><img src='{$week['img_src']}'></a><br><h4>{$week['caption']}</h4></li>";
   }
 ?>
 <!DOCTYPE html>
@@ -16,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- <script src="a.js"></script> -->
-  <link href="css/style.css?v=1.1.5" rel="stylesheet" type="text/css">
+  <link href="css/style.css?v=1.1.6" rel="stylesheet" type="text/css">
   <title>Kevin Phair - CS313</title>
 </head>
 <body>

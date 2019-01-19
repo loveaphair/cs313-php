@@ -53,6 +53,14 @@ h1, h2, h3{
 	margin:2px;
 }
 
+.week-display img{
+	width:70%;
+}
+
+.caption{
+	text-align: center;
+}
+
 
 /* Assignment Specific Classes */
 .assignment-body{
