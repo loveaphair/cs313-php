@@ -26,7 +26,7 @@
               <span class="og-close"></span>
               <div class="og-fullimg">
                 <div class="og-loading"></div>
-                <img src="images/2.jpg">
+                <img src="images/week2.png">
               </div>
               <div class="og-details">
                 <h3>Veggies sunt bona vobis</h3>
