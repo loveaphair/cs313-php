@@ -2,12 +2,12 @@
 /* General Styling */
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Didact+Gothic');
 body{
-	background-color:#000033;
+	background-color:#001433;
 	font-family: 'Diadact Gothic', sans-serif
 }
 
 .main-area{
-	width:85%;
+	width:80%;
 	margin:auto;
 	border: 1px solid darkblue;
 	height: 100vh;
@@ -17,6 +17,7 @@ body{
 h1, h2{
 	font-family: 'Alfa Slab One';
 	color: #000033;
+	font-weight:normal;
 }
 
 .indent{
