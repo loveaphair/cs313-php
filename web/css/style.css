@@ -64,7 +64,7 @@ h1, h2, h3{
 }
 
 .week-display:hover{
-	transform:scale(1.05);
+	transform:scale(1.01);
 }
 
 .caption{
