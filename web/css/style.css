@@ -60,7 +60,8 @@ h1, h2, h3{
 }
 
 .week-display:hover{
-	transform:scale(1.1);
+	transform:scale(1.05);
+	box-shadow: 5px 10px;
 }
 
 .caption{
