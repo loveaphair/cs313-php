@@ -63,10 +63,6 @@ h1, h2, h3{
 	box-shadow: 5px 5px 15px #001433;
 }
 
-.week-display:hover{
-	transform:scale(1.01);
-}
-
 .caption{
 	margin-top:-40px;
 }
