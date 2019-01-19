@@ -1,4 +1,30 @@
 
+/* General Styling */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Didact+Gothic');
+body{
+	background-color:#000033;
+	font-family: 'Diadact Gothic', sans-serif
+}
+
+.main-area{
+	width:85%;
+	margin:auto;
+	border: 1px solid darkblue;
+	height: 100vh;
+	background-color:#F5F5F5;
+}
+
+h1, h2{
+	font-family: 'Alfa Slab One';
+	color: #000033;
+}
+
+.indent{
+	margin-left:20px;
+}
+
+
+/* Assignment Specific Classes */
 .clicky-areas > div{
 	height: 30px;
 	width: 60px;
