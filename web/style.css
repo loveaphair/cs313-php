@@ -1,6 +1,6 @@
 
 /* General Styling */
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Didact+Gothic');
 body{
 	background-color:#001433;
 	font-family: 'Diadact Gothic', sans-serif
@@ -15,13 +15,17 @@ body{
 }
 
 h1, h2{
-	font-family: 'Alfa Slab One';
+	font-family: 'Bangers';
 	color: #000033;
 	font-weight:normal;
 }
 
 .indent{
 	margin-left:20px;
+}
+
+.title-text{
+	font-size:160%;
 }
 
 
