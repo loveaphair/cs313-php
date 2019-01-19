@@ -19,7 +19,13 @@
   </div>
 
   <div class="content-area">
-    
+    <ul id="og-grid" class="og-grid">
+      <li>
+        <a href="#" data-largsrc="images/week2.png" data-title="Week 2 Team Assignment" data-description="Team Assignment completed in Week 2">
+          <img src="images/week2_tn.jpg" alt="Week2">
+        </a>
+      </li>
+    </ul>
   </div>
 </body>
 </html>
