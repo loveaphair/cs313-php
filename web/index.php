@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!-- <script src="a.js"></script> -->
   <script src="js/modernizr.custom.js"></script>
   <link href="css/style.css?v=1.1.5" rel="stylesheet" type="text/css">
@@ -19,7 +20,7 @@
       <ul id="og-grid" class="og-grid">
         <li>
           <a href="#" data-largsrc="images/week2.png" data-title="Week 2 Team Assignment" data-description="Team Assignment completed in Week 2">
-            <img src="images/week2_tn.jpg" alt="Week2">
+            <img src="images/week2_tn.png" alt="Week2">
           </a>
           <div class="og-expander">
             <div class="og-expander-inner">
@@ -40,7 +41,6 @@
     </div>
   </div>
   <script src="js/grid.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>
     $(function(){
       Grid.init();
