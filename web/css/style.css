@@ -42,6 +42,12 @@ h1, h2, h3{
 	align-content:space-around;
 }
 
+.intro-area{
+	width:70%;
+	margin:auto;
+	display:relative;
+}
+
 .weeks-display{
 	width:100%;
 	list-style-type: none;
