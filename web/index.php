@@ -2,7 +2,7 @@
   $weeks = [
     'week2' => ['img_src' => 'images/week2.png',
                 'caption' => 'Week 2 Team Assignment',
-                'description' => 'Three interactive buttons',
+                'description' => 'Three interactive buttons of joy involving serious js skillz',
                 'href' => '/hello.html' ]
   ];
   foreach($weeks as $week){
