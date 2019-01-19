@@ -40,8 +40,10 @@
     </div>
   </div>
   <script src="js/grid.js"></script>
-  <script>$(function(){
-    Grid.init();
-  });
+  <script>
+    $(function(){
+      Grid.init();
+    });
+  </script>
 </body>
 </html>
