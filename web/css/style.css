@@ -51,6 +51,7 @@ h1, h2, h3{
 .week-display{
 	flex-basis:31%;
 	margin:2px;
+	max-width:31%;
 }
 
 .week-display img{
