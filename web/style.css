@@ -7,7 +7,7 @@ body{
 }
 
 .main-area{
-	width:80%;
+	width:70%;
 	margin:auto;
 	border: 1px solid darkblue;
 	height: 100vh;
@@ -25,7 +25,7 @@ h1, h2{
 }
 
 .title-text{
-	font-size:160%;
+	font-size:4em;
 }
 
 
