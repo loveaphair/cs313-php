@@ -56,7 +56,11 @@ h1, h2, h3{
 }
 
 .week-display img{
-	transform: scale(0.7);
+	border: 1px solid #000033;
+}
+
+.week-display:hover{
+	transform:scale(1.1);
 }
 
 .caption{

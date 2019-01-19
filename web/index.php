@@ -1,6 +1,6 @@
 <?php
   $weeks = [
-    'week2' => ['img_src' => 'images/week2_tn.png',
+    'week2' => ['img_src' => 'images/week2.png',
                 'caption' => 'Week 2 Team Assignment',
                 'Description' => 'Three interactive buttons',
                 'href' => '/hello.html' ]
