@@ -28,6 +28,11 @@ h1{
 	font-size:4em;
 }
 
+.subtitle-text{
+	color:slategrey;
+	margin-top:-60px;
+}
+
 
 /* Assignment Specific Classes */
 .clicky-areas > div{
