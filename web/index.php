@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- <script src="a.js"></script> -->
-  <script src="js/grid.js"></script>
   <script src="js/modernizr.custom.js"></script>
   <link href="css/style.css?v=1.1.5" rel="stylesheet" type="text/css">
   <link href="css/component.css?v=1" rel="stylesheet" type="text/css">
@@ -40,5 +39,9 @@
       </ul>
     </div>
   </div>
+  <script src="js/grid.js"></script>
+  <script>$(function(){
+    Grid.init();
+  });
 </body>
 </html>
