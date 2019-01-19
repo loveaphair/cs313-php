@@ -14,7 +14,7 @@ body{
 	background-color:#F5F5F5;
 }
 
-h1{
+h1, h2, h3{
 	font-family: 'Bangers';
 	color: #000033;
 	font-weight:normal;
@@ -29,8 +29,8 @@ h1{
 }
 
 .subtitle-text{
-	color:slategrey;
-	margin-top:-60px;
+	color:slategrey !important;
+	margin-top:-50px;
 }
 
 
