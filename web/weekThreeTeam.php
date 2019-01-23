@@ -14,7 +14,7 @@
 					];
 
 	foreach($major_options as $option){
-		$major_html .= "<input type='radio' name='major', id='{$option['id']}', value='{$option['value']}'><label for {$option['id']}>{$option['label']}</label>";
+		$major_html .= "<input type='radio' name='major', id='{$option['id']}', value='{$option['value']}'><label for {$option['id']}>{$option['label']}</label><br>";
 	}
 ?>
 <!DOCTYPE html>
