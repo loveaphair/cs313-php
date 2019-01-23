@@ -33,38 +33,40 @@
     <h1 class="indent title-text">Week Three - CS313</title>
     <h3 class="indent subtitle-text">Team Assignment</h3>
     <div class="content-area">
-	<?php if(!isset($_POST) || (isset($_POST) && !$_POST)){ ?>
-      <form id="weekThree" method="POST" action="">
-		<p>Name: <input type="text" name="name" required></p>
-		<p>Email: <input type="text" name="email" required></p>
-		<p>Major: <br>
-			<!-- <?=$major_html?> -->
-			<input type="radio" name="major" id="majorChoice1" value="computerScience">
-			<label for="majorChoice1">Computer Science</label>
-			<br>
-			<input type="radio" name="major" id="majorChoice2" value="webDesign">
-			<label for="majorChoice2">Web Design and Development</label>
-			<br>
-			<input type="radio" name="major" id="majorChoice3" value="cit">
-			<label for="majorChoice3">Computer information Technology</label>
-			<br>
-			<input type="radio" name="major" id="majorChoice4" value="computerEngineer">
-			<label for="majorChoice4">Computer Engineering</label>
-		</p>
-		<p>Comments:<br>
-		<textarea rows="5" cols="50" name="comments"></textarea>
-		</p>
-		<input type="submit" value="Submit">
-	  </form>
-	<?php } else {?>
-		<p>Hi, <?=$_POST['name']?>!</p>
-		<p>We recorded your email address as <a href="mailto:<?=$_POST['email']?>"><?=$_POST['email']?></a></p>
-		<p>It looks like you're majoring in <?=$_POST['major']?>; that is very exciting for you!</p>
-		<p>Thanks for leaving these comments:<br>
-		<?=$_POST['comments']?>
-		</p>
+	<div class="intro-area">
+		<?php if(!isset($_POST) || (isset($_POST) && !$_POST)){ ?>
+		<form id="weekThree" method="POST" action="">
+			<p>Name: <input type="text" name="name" required></p>
+			<p>Email: <input type="text" name="email" required></p>
+			<p>Major: <br>
+				<!-- <?=$major_html?> -->
+				<input type="radio" name="major" id="majorChoice1" value="Computer Science">
+				<label for="majorChoice1">Computer Science</label>
+				<br>
+				<input type="radio" name="major" id="majorChoice2" value="Web Design and Development">
+				<label for="majorChoice2">Web Design and Development</label>
+				<br>
+				<input type="radio" name="major" id="majorChoice3" value="Computer information Technology">
+				<label for="majorChoice3">Computer information Technology</label>
+				<br>
+				<input type="radio" name="major" id="majorChoice4" value="Computer Engineering">
+				<label for="majorChoice4">Computer Engineering</label>
+			</p>
+			<p>Comments:<br>
+			<textarea rows="5" cols="50" name="comments"></textarea>
+			</p>
+			<input type="submit" value="Submit">
+		</form>
+		<?php } else {?>
+			<p>Hi, <?=$_POST['name']?>!</p>
+			<p>We recorded your email address as <a href="mailto:<?=$_POST['email']?>"><?=$_POST['email']?></a></p>
+			<p>It looks like you're majoring in <?=$_POST['major']?>; that is very exciting for you!</p>
+			<p>Thanks for leaving these comments:<br>
+			<?=$_POST['comments']?>
+			</p>
 
-	<?php } ?>
+		<?php } ?>
+		</div>
     </div>
   </div>
 </body>
