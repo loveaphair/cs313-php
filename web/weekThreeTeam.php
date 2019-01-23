@@ -33,7 +33,7 @@
     <h1 class="indent title-text">Week Three - CS313</title>
     <h3 class="indent subtitle-text">Team Assignment</h3>
     <div class="content-area">
-	<?php if(!isset($_POST)){ ?>
+	<?php if(!isset($_POST) || (isset($_POST) && !$_POST)){ ?>
       <form id="weekThree" method="POST" action="/">
 		<p>Name: <input type="text" name="name" required></p>
 		<p>Email: <input type="text" name="email" required></p>
@@ -58,7 +58,7 @@
 	  </form>
 	<?php } else {?>
 		<p>Hi, <?=$_POST['name']?>!</p>
-		<p>We recorded your email address as <a href="mailto:<?=$_POST['email']?>"><?=$_POST['email']?></a><p>
+		<p>We recorded your email address as <a href="mailto:<?=$_POST['email']?>"><?=$_POST['email']?></a></p>
 		<p>It looks like you're majoring in <?=$_POST['major']?>; that is very exciting for you!</p>
 		<p>Thanks for leaving these comments:<br>
 		<?=$_POST['comments']?>
