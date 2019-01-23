@@ -56,13 +56,13 @@
 			<textarea rows="5" cols="50" name="comments"></textarea>
 			</p>
 			<p>List the Continents you have visited<br>
-				<input type="checkbox" name="continents" value="North America">North America<br>
-				<input type="checkbox" name="continents" value="South America">South America<br>
-				<input type="checkbox" name="continents" value="Europe">Europe<br>
-				<input type="checkbox" name="continents" value="Asia">Asia<br>
-				<input type="checkbox" name="continents" value="Australia">Australia<br>
-				<input type="checkbox" name="continents" value="Africa">Africa<br>
-				<input type="checkbox" name="continents" value="Antarctica">Antarctica<br>
+				<input type="checkbox" name="continents[]" value="North America">North America<br>
+				<input type="checkbox" name="continents[]" value="South America">South America<br>
+				<input type="checkbox" name="continents[]" value="Europe">Europe<br>
+				<input type="checkbox" name="continents[]" value="Asia">Asia<br>
+				<input type="checkbox" name="continents[]" value="Australia">Australia<br>
+				<input type="checkbox" name="continents[]" value="Africa">Africa<br>
+				<input type="checkbox" name="continents[]" value="Antarctica">Antarctica<br>
 			</p>
 			<input type="submit" value="Submit">
 		</form>
@@ -73,8 +73,7 @@
 			<p>Thanks for leaving these comments:<br>
 			<?=$_POST['comments']?>
 			</p>
-			<!-- <p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p> -->
-			<p>Here are the continents you have visited: <?=$_POST['continents']?></p>
+			<p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p>
 			
 		<?php } ?>
 		</div>
