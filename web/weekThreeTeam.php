@@ -1,3 +1,22 @@
+<?php
+	$major_options = ['majorChoice1' => ['id' => 'majorChoice1',
+										'value' => 'computerScience',
+										'label' => 'Computer Science'],
+					  'majorChoice2' => ['id' => 'majorChoice2',
+										'value' => 'webDesign',
+										'label' => 'Web Design and Development'],
+					  'majorChoice3' => ['id' => 'majorChoice3',
+										'value' => 'cit',
+										'label' => 'Computer information Technology'],
+					  'majorChoice4' => ['id' => 'majorChoice4',
+										'value' => 'computerEngineer',
+										'label' => 'Computer Engineering'],
+					];
+
+	foreach($major_options as $option){
+		$major_html .= "<input type='radio' name='major', id='{$option['id']}', value='{$option['value']}'><label for {$option['id']}>{$option['label']}</label>";
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +37,21 @@
 		<p>Name: <input type="text" name="name" required></p>
 		<p>Email: <input type="text" name="email" required></p>
 		<p>Major: <br>
+			<!-- <?=$major_html?> -->
 			<input type="radio" name="major" id="majorChoice1" value="computerScience">
 			<label for="majorChoice1">Computer Science</label>
 			<br>
 			<input type="radio" name="major" id="majorChoice2" value="webDesign">
-			<label for="majorChoice2">Computer Science</label>
+			<label for="majorChoice2">Web Design and Development</label>
 			<br>
 			<input type="radio" name="major" id="majorChoice3" value="cit">
-			<label for="majorChoice3">Computer Science</label>
+			<label for="majorChoice3">Computer information Technology</label>
 			<br>
 			<input type="radio" name="major" id="majorChoice4" value="computerEngineer">
-			<label for="majorChoice4">Computer Science</label>
+			<label for="majorChoice4">Computer Engineering</label>
+		</p>
+		<p>Comments:<br>
+		<textarea rows="5" cols="50"></textarea>
 		</p>
 	  </form>
     </div>
