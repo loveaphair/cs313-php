@@ -41,6 +41,7 @@ h1, h2, h3{
 	flex-wrap:wrap;
 	justify-content:flex-start;
 	align-content:space-around;
+	margin-left:25px;
 }
 
 .intro-area{
@@ -60,6 +61,7 @@ h1, h2, h3{
 	margin:2px;
 	max-width:31%;
 	text-align: center;
+	display:inline-block;
 }
 
 .week-display img{
