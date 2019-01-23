@@ -1,15 +1,15 @@
 <?php
 	$major_options = ['majorChoice1' => ['id' => 'majorChoice1',
-										'value' => 'computerScience',
+										'value' => 'Computer Science',
 										'label' => 'Computer Science'],
 					  'majorChoice2' => ['id' => 'majorChoice2',
-										'value' => 'webDesign',
+										'value' => 'Web Design and Development',
 										'label' => 'Web Design and Development'],
 					  'majorChoice3' => ['id' => 'majorChoice3',
-										'value' => 'cit',
+										'value' => 'Computer information Technology',
 										'label' => 'Computer information Technology'],
 					  'majorChoice4' => ['id' => 'majorChoice4',
-										'value' => 'computerEngineer',
+										'value' => 'Computer Engineering',
 										'label' => 'Computer Engineering'],
 					];
 
@@ -39,8 +39,8 @@
 			<p>Name: <input type="text" name="name" required></p>
 			<p>Email: <input type="text" name="email" required></p>
 			<p>Major: <br>
-				<!-- <?=$major_html?> -->
-				<input type="radio" name="major" id="majorChoice1" value="Computer Science">
+				<?=$major_html?>
+				<!-- <input type="radio" name="major" id="majorChoice1" value="Computer Science">
 				<label for="majorChoice1">Computer Science</label>
 				<br>
 				<input type="radio" name="major" id="majorChoice2" value="Web Design and Development">
@@ -50,7 +50,7 @@
 				<label for="majorChoice3">Computer information Technology</label>
 				<br>
 				<input type="radio" name="major" id="majorChoice4" value="Computer Engineering">
-				<label for="majorChoice4">Computer Engineering</label>
+				<label for="majorChoice4">Computer Engineering</label> -->
 			</p>
 			<p>Comments:<br>
 			<textarea rows="5" cols="50" name="comments"></textarea>
@@ -74,7 +74,6 @@
 			<?=$_POST['comments']?>
 			</p>
 			<p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p>
-			
 		<?php } ?>
 		</div>
     </div>
