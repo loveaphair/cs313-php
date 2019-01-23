@@ -73,6 +73,7 @@
 			<p>Thanks for leaving these comments:<br>
 			<?=$_POST['comments']?>
 			</p>
+			<p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p>
 			
 		<?php } ?>
 		</div>
