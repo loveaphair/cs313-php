@@ -101,3 +101,7 @@ h1, h2, h3{
 .clicky-areas div:hover{
 	font-weight:bold;
 }
+
+.continent-list{
+	list-style-type: none;
+}

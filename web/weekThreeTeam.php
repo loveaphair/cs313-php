@@ -95,10 +95,12 @@
 			<?=$comments?>
 			</p>
 			<p>Here are the continents you have visited: </p>
+			<ul class="continent-list">
 			<?php foreach($continents as $c){
 				$clean_c = htmlspecialchars($c);
-				echo "<li><p>$clean_c</p></li>";
+				echo "<li>$clean_c</li>";
 			} ?>
+			</ul>
 		<?php } ?>
 		</div>
     </div>
