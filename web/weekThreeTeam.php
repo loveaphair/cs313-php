@@ -74,7 +74,7 @@
 			<?=$_POST['comments']?>
 			</p>
 			<!-- <p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p> -->
-			<p>Here are the continents you have visited: <?=$_POST['continents'])?></p>
+			<p>Here are the continents you have visited: <?=$_POST['continents']?></p>
 			
 		<?php } ?>
 		</div>
