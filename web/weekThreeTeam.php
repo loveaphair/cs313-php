@@ -64,8 +64,9 @@
 			<p>Thanks for leaving these comments:<br>
 			<?=$_POST['comments']?>
 			</p>
-
-		<?php } ?>
+			
+		<?php unset($_POST); 
+			} ?>
 		</div>
     </div>
   </div>
