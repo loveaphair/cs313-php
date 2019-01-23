@@ -79,14 +79,26 @@
 			</p>
 			<input type="submit" value="Submit">
 		</form>
-		<?php } else {?>
-			<p>Hi, <?=$_POST['name']?>!</p>
-			<p>We recorded your email address as <a href="mailto:<?=$_POST['email']?>"><?=$_POST['email']?></a></p>
-			<p>It looks like you're majoring in <?=$_POST['major']?>; that is very exciting for you!</p>
+		<?php } else {
+			// Process all the $_POST data
+			$name = htmlspecialchars($_POST['name']);
+			$email = htmlspecialchars($_POST['email']);
+			$major = htmlspecialchars($_POST['major']);
+			$comments = htmlspecialchars($_POST['comments']);
+			$continents = $_POST['continents'];
+			?>
+			
+			<p>Hi, <?=$name?>!</p>
+			<p>We recorded your email address as <a href="mailto:<?=$email?>"><?=$email?></a></p>
+			<p>It looks like you're majoring in <?=$major?>; that is very exciting for you!</p>
 			<p>Thanks for leaving these comments:<br>
-			<?=$_POST['comments']?>
+			<?=$comments?>
 			</p>
-			<p>Here are the continents you have visited: <?=implode(", ", $_POST['continents'])?></p>
+			<p>Here are the continents you have visited: </p>
+			<?php foreach($continents as $c){
+				$clean_c = htmlspecialchars($c);
+				echo "<li><p>$clean_c</p></li>";
+			} ?>
 		<?php } ?>
 		</div>
     </div>
