@@ -34,7 +34,7 @@
     <h3 class="indent subtitle-text">Team Assignment</h3>
     <div class="content-area">
 	<?php if(!isset($_POST) || (isset($_POST) && !$_POST)){ ?>
-      <form id="weekThree" method="POST" action="/">
+      <form id="weekThree" method="POST" action="/weekThreeTeam.php">
 		<p>Name: <input type="text" name="name" required></p>
 		<p>Email: <input type="text" name="email" required></p>
 		<p>Major: <br>
