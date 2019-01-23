@@ -3,7 +3,11 @@
     'week2' => ['img_src' => 'images/week2.png',
                 'caption' => 'Week 2 Team Assignment',
                 'description' => 'Three interactive buttons of joy involving serious js skillz',
-                'href' => '/hello.html' ]
+                'href' => '/hello.html' ],
+    'week3' => ['img_src' => 'images/week2.png',
+                'caption' => 'Week 3 Team Assignment',
+                'description' => 'Secure PHP Form Handling',
+                'href' => '/weekThreeTeam.php']
   ];
   foreach($weeks as $week){
     $week_display .= "<li class='week-display'><a href='{$week['href']}' target='_blank'><img src='{$week['img_src']}'></a><br><h4 class='caption'>{$week['caption']}</h4>{$week['description']}</li>";
