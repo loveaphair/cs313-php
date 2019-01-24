@@ -2,9 +2,9 @@
   $weeks = [
     'week2' => ['img_src' => 'images/week2.png',
                 'caption' => 'Week 2 Team Assignment',
-                'description' => 'Three interactive buttons of joy involving serious js skillz',
+                'description' => 'Three interactive js buttons',
                 'href' => '/hello.html' ],
-    'week3' => ['img_src' => 'images/week2.png',
+    'week3' => ['img_src' => 'images/week3.png',
                 'caption' => 'Week 3 Team Assignment',
                 'description' => 'Secure PHP Form Handling',
                 'href' => '/weekThreeTeam.php']
