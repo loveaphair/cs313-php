@@ -9,6 +9,7 @@
                 'description' => 'Secure PHP Form Handling',
                 'href' => '/weekThreeTeam.php']
   ];
+  $week_display = '';
   foreach($weeks as $week){
     $week_display .= "<li class='week-display'><a href='{$week['href']}' target='_blank'><img src='{$week['img_src']}'></a><br><h4 class='caption'>{$week['caption']}</h4>{$week['description']}</li>";
   }
