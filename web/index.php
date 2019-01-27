@@ -3,11 +3,15 @@
     'week2' => ['img_src' => 'images/week2.png',
                 'caption' => 'Week 2 Team Assignment',
                 'description' => 'Three interactive js buttons',
-                'href' => '/hello.html' ],
+                'href' => 'hello.html' ],
     'week3' => ['img_src' => 'images/week3.png',
                 'caption' => 'Week 3 Team Assignment',
                 'description' => 'Secure PHP Form Handling',
-                'href' => '/weekThreeTeam.php']
+                'href' => 'weekThreeTeam.php'],
+    'week3-ind' => ['img_src' => 'images/week3-ind.png',
+                'caption' => 'Week 3 Individual Assignment',
+                'description' => 'Shopping Cart',
+                'href' => 'shopping_view.php'],
   ];
   $week_display = '';
   foreach($weeks as $week){

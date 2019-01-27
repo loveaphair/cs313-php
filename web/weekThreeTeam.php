@@ -12,7 +12,7 @@
 										'value' => 'Computer Engineering',
 										'label' => 'Computer Engineering'],
 					];
-
+	$major_html = '';
 	foreach($major_options as $option){
 		$major_html .= "<input type='radio' name='major', id='{$option['id']}', value='{$option['value']}'><label for {$option['id']}>{$option['label']}</label><br>";
 	}
@@ -25,6 +25,7 @@
 						  'Africa',
 						  'Antarctica'
 						];
+	$continent_html = '';
 	foreach($continent_options as $con){
 		$continent_html .= "<input type='checkbox' name='continents[]' value='{$con}'>{$con}<br>";
 	}
