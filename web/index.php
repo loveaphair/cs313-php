@@ -12,6 +12,10 @@
                 'caption' => 'Week 3 Individual Assignment',
                 'description' => 'Shopping Cart',
                 'href' => 'shopping_view.php'],
+    'week5' => ['img_src' => 'images/week5.png',
+                'caption' => 'Week 5 Individual Assignment',
+                'description' => 'Database Calls',
+                'href' => 'ge/'],
   ];
   $week_display = '';
   foreach($weeks as $week){

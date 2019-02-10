@@ -10,14 +10,7 @@ CREATE TABLE public.users
     CONSTRAINT users_id PRIMARY KEY (id),
     CONSTRAINT email_addrress UNIQUE (email_address)
 
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.users
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.recipe_categories
 (
@@ -26,14 +19,7 @@ CREATE TABLE public.recipe_categories
     CONSTRAINT recipe_categories_id PRIMARY KEY (id),
     CONSTRAINT recipe_categories_name UNIQUE (name)
 
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.recipe_categories
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.recipes
 (
@@ -53,14 +39,7 @@ CREATE TABLE public.recipes
         REFERENCES public.users (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.recipes
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.measurements
 (
@@ -69,13 +48,7 @@ CREATE TABLE public.measurements
     CONSTRAINT measurements_id PRIMARY KEY (id),
     CONSTRAINT name UNIQUE (name)
 
-)
-WITH (
-    OIDS = FALSE
 );
-
-ALTER TABLE public.measurements
-    OWNER to yehhzpljklqjgm;
 
 CREATE TABLE public.ingredient_types
 (
@@ -84,14 +57,7 @@ CREATE TABLE public.ingredient_types
     CONSTRAINT ingredient_types_id PRIMARY KEY (id),
     CONSTRAINT ingredient_types_name UNIQUE (name)
 
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.ingredient_types
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.ingredients
 (
@@ -105,14 +71,7 @@ CREATE TABLE public.ingredients
         REFERENCES public.ingredient_types (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.ingredients
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.recipe_ingredients
 (
@@ -139,14 +98,7 @@ CREATE TABLE public.recipe_ingredients
         REFERENCES public.users (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.recipe_ingredients
-    OWNER to yehhzpljklqjgm;
+);
 
 CREATE TABLE public.recipe_instructions
 (
@@ -166,14 +118,7 @@ CREATE TABLE public.recipe_instructions
         REFERENCES public.users (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
-
-ALTER TABLE public.recipe_instructions
-    OWNER to yehhzpljklqjgm;
+);
 
 COMMENT ON CONSTRAINT recipe_instructions_recipe_id ON public.recipe_instructions
     IS 'Can only have one set of instructions per recipe';

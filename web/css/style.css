@@ -63,9 +63,9 @@ h1 a, h2 a, h3 a{
 }
 
 .week-display{
-	flex-basis:31%;
+	flex-basis:40%;
 	margin:2px;
-	max-width:31%;
+	width:32%;
 	text-align: center;
 	display:inline-block;
 	vertical-align:top;
