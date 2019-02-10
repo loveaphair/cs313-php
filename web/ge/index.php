@@ -3,9 +3,9 @@
 // Create or access a Session
 // session_start();
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/cs/ge/library/dbConnect.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ge/library/dbConnect.php';
 // require_once 'model/nwn-model.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/cs/ge/library/functions.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ge/library/functions.php';
 // require_once 'model/page-manager-model.php';
 
 // Get the array of categories

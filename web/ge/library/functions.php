@@ -18,7 +18,7 @@ function buildNav($pages) {
 	$navList = '<div class="mainNav" id="main_nav">';
 	$navList .= "<a class='pure-menu-link' href='?cat=home' title='home'>Home</a>";
     foreach ($pages as $page) {
-        $navList .= "<a class='pure-menu-link' href='/cs/ge/?cat=". $page['id'] . "' title='" . $page['name'] . "'>" . $page['name'] . "</a>";
+        $navList .= "<a class='pure-menu-link' href='/ge/?cat=". $page['id'] . "' title='" . $page['name'] . "'>" . $page['name'] . "</a>";
     }
     $navList .= '<a class="navIcon" onclick="showMenu()"><i class="fa fa-bars"></i></a>';
     $navList .= '</div>';

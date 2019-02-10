@@ -1,6 +1,6 @@
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/cs/ge/modules/head.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/cs/ge/modules/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/head.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/header.php'; ?>
 
 <nav>
     <?php echo $navList; ?>
@@ -22,4 +22,4 @@
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/cs/ge/modules/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/footer.php'; ?>
