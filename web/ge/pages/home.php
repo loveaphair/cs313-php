@@ -1,6 +1,6 @@
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/head.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/header.php'; ?>
+<?php include $path . '/modules/head.php'; ?>
+<?php include $path . '/modules/header.php'; ?>
 
 <nav>
     <?php echo $navList; ?>
@@ -15,4 +15,4 @@
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/footer.php'; ?>
+<?php include $path . '/modules/footer.php'; ?>

@@ -16,9 +16,9 @@ function getPages(){
 
 function buildNav($pages) {
 	$navList = '<div class="mainNav" id="main_nav">';
-	$navList .= "<a class='pure-menu-link' href='?cat=home' title='home'>Home</a>";
+	$navList .= "<a class='pure-menu-link' href='?a=home' title='home'>Home</a>";
     foreach ($pages as $page) {
-        $navList .= "<a class='pure-menu-link' href='/ge/?cat=". $page['id'] . "' title='" . $page['name'] . "'>" . $page['name'] . "</a>";
+        $navList .= "<a class='pure-menu-link' href='?f=categories&a=". $page['id'] . "' title='" . $page['name'] . "'>" . $page['name'] . "</a>";
     }
     $navList .= '<a class="navIcon" onclick="showMenu()"><i class="fa fa-bars"></i></a>';
     $navList .= '</div>';
@@ -28,6 +28,8 @@ function buildNav($pages) {
 function getCategoryPageById($id){
 	$sql = "SELECT name FROM recipe_categories WHERE id = '{$id}'";
 	$cat_data = runStmt($sql);
+	if(!$cat_data)
+		return [];
 	$page = ['file' => 'pages/'.(strtolower(array_column($cat_data, 'name')[0])).'.php',
 			'name' => array_column($cat_data, 'name')[0]
 			];
@@ -47,6 +49,8 @@ function getRecipeById($id){
 			WHERE r.id = '{$id}'
 			";
 	$recipe = runStmt($sql);
+	if(!$recipe)
+		return [];
 	$sql2 = "SELECT ri.measurement_amt, m.name mname, i.title ingredient
 			FROM recipe_ingredients ri
 			LEFT JOIN measurements m ON ri.measurement_id = m.id

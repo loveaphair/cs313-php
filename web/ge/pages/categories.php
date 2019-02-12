@@ -1,6 +1,6 @@
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/head.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/header.php'; ?>
+<?php include $path . '/modules/head.php'; ?>
+<?php include $path . '/modules/header.php'; ?>
 
 <nav>
     <?php echo $navList; ?>
@@ -10,7 +10,7 @@
     <h1><?=$page_title?></h1>
         <?php if(isset($recipes) && count($recipes)) { 
             foreach($recipes as $recipe){
-                echo "<a href='recipes/?recipe_id={$recipe['id']}' title='{$recipe['title']}'>{$recipe['title']}</a><br>";
+                echo "<a href='?f=recipes&a={$recipe['id']}' title='{$recipe['title']}'>{$recipe['title']}</a><br>";
             }
         }else{ ?>
         <h2>Sorry, no recipes for this category yet.</h2>
@@ -22,4 +22,4 @@
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/footer.php'; ?>
+<?php include $path. '/modules/footer.php'; ?>

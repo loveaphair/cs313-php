@@ -1,6 +1,6 @@
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/head.php'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/header.php'; ?>
+<?php include $path . '/modules/head.php'; ?>
+<?php include $path . '/modules/header.php'; ?>
 
 <nav>
     <?php echo $navList; ?>
@@ -11,7 +11,7 @@
 		if(isset($recipe_data)) {
 			$ri = $recipe_data[0];
 			$recipe_html = "<h2>{$ri['title']}</h2>";
-			$recipe_html .= "<img src='../images/recipe_images/{$ri['image_file']}' width='100px'><h3>Ingredients</h3><ul>";
+			$recipe_html .= "<img src='images/recipe_images/{$ri['image_file']}' width='100px'><h3>Ingredients</h3><ul>";
 			foreach($ri['ingredients'] as $ing){
 				$recipe_html .= "<li>{$ing['measurement_amt']} {$ing['mname']} {$ing['ingredient']}</li>";
 			}
@@ -29,4 +29,4 @@
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/ge/modules/footer.php'; ?>
+<?php include $path . '/modules/footer.php'; ?>
