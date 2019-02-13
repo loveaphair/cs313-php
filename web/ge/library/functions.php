@@ -60,3 +60,59 @@ function getRecipeById($id){
 	return $recipe;
 }
 
+
+
+
+
+
+
+
+
+/**
+ * THIS AREA IS FOR GROUP WORK.
+ */
+
+function getScriptureTopics(){
+	$sql = "SELECT * FROM topic";
+	return runStmt($sql);
+}
+
+function getScriptures(){
+	$sql = "SELECT * FROM scriptures";
+	return runStmt($sql);
+}
+
+function getTopicByScriptureId($scripture_id){
+	$sql = "SELECT t.name FROM scripture_topic_links stl LEFT JOIN topic t ON t.id = stl.topic_id WHERE stl.scriptures_id = '{$scripture_id}'";
+	return runStmt($sql);
+}
+
+function updateScripture($data){
+	$sql = "INSERT INTO scriptures (book, chapter, verse, content) VALUES ('{$data['book']}','{$data['chapter']}','{$data['verse']}','{$data['content']}')";
+	$db = get_db();
+	$stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result= $db->lastInsertId();
+	$stmt->closeCursor();
+	return $result;
+}
+
+function updateScriptureTopic($topic_id, $scripture_id){
+	$sql = "INSERT INTO scripture_topic_links (scriptures_id, topic_id) VALUES ('{$scripture_id}','{$topic_id}')";
+	$db = get_db();
+	$stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result= $db->lastInsertId();
+	$stmt->closeCursor();
+	return $result;
+}
+
+function updateTopic($topic_name){
+	$sql = "INSERT INTO topic (name) VALUES ('{$topic_name}')";
+	$db = get_db();
+	$stmt = $db->prepare($sql);
+	$stmt->execute();
+	$result= $db->lastInsertId();
+	$stmt->closeCursor();
+	return $result;
+}
