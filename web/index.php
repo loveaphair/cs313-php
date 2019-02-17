@@ -20,6 +20,10 @@
                     'caption' => 'Week 6 Team Assignment',
                     'description' => 'Database CRUD',
                     'href' => 'ge/group'],
+    'week6' => ['img_src' => 'images/week6.png',
+                    'caption' => 'Week 6 Individual Assignment',
+                    'description' => 'Database CRUD',
+                    'href' => 'ge/'],
   ];
   $week_display = '';
   foreach($weeks as $week){
