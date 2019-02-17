@@ -119,6 +119,16 @@
         background-color:#F3CC6F;
     }
 
+    .input-title{
+        width:100px;
+        display:inline-block;
+    }
+
+    .input-ingredient{
+        width:140px !important;
+        display:inline-block;
+    }
+
     .main-area{
         width:100%;
         min-height:200px;
@@ -234,6 +244,7 @@
     .no-decor{
         list-style-type: none;
         padding:0;
+        text-decoration:none;
     }
 
     .checklist {
@@ -301,6 +312,8 @@
 
     input[type=text], input[type=password], input[type=email]{
         min-width:50%;
+        height:26px;
+        vertical-align: top;
     }
 
     .button-like, button, input[type=button]{
@@ -308,12 +321,13 @@
         background-color: #E9E9E9;
         text-align:center;
         padding:1.5px 6px;
-        vertical-align: middle;
+        vertical-align: top;
         margin-bottom: 2px;
         display: inline-block;
         position: relative;
         text-decoration: none;
         color:black;
+        height:31px;
     }
 
     .button-like:active, button:active, input[type=button]:active{
