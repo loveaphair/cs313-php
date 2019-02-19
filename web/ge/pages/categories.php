@@ -11,12 +11,14 @@
         <?php if(isset($recipes) && count($recipes)) { 
             foreach($recipes as $recipe){
                 echo "<div><form name='recipe-link' action='?f=categories&a=deleteRecipe' method='POST'>
-                <a href='?f=recipes&a={$recipe['id']}' title='{$recipe['title']}'>{$recipe['title']}</a> 
-                <a href='?f=recipes&a=updateRecipeForm&rid={$recipe['id']}' title='edit this recipe'>[edit]</a>
+                <a href='?f=recipes&a={$recipe['id']}' title='{$recipe['title']}'>{$recipe['title']}</a>";
+                if(isset($_SESSION) && $_SESSION['clientData']['clientlevel'] > 0){
+                echo "<a href='?f=recipes&a=updateRecipeForm&rid={$recipe['id']}' title='edit this recipe'>[edit]</a>
                 <a href='javascript:void(0);' class='delete-recipe' title='delete'> [delete]</a>
                 <input type='hidden' name='rid' value='{$recipe['id']}'>
-                <input type='hidden' name='catid' value='{$action}'>
-                </form></div>";
+                <input type='hidden' name='catid' value='{$action}'>";
+                }
+                echo "</form></div>";
             }
         }else{ ?>
         <h2>Sorry, no recipes for this category yet.</h2>

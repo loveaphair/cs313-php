@@ -1,7 +1,7 @@
 <?php
 
 // Create or access a Session
-// session_start();
+session_start();
 
 $is_dev = strpos($_SERVER['DOCUMENT_ROOT'], 'mappstack') ? '/cs' : '';
 $path = $is_dev ? $_SERVER['DOCUMENT_ROOT'] . '/cs/ge' : $_SERVER['DOCUMENT_ROOT'] . '/ge';
@@ -9,6 +9,7 @@ $relative_path = $is_dev ? '/cs/ge/' : '/ge/';
 
 require_once $path . '/library/dbConnect.php';
 require_once $path . '/library/functions.php';
+require_once $path . '/library/accounts-model.php';
 
 // Get the array of categories
 $pages = getPages();
@@ -59,6 +60,108 @@ switch ($function){
                 break;
         }
         break;
+    case 'account':
+        switch($action){
+            case 'login':
+            default:
+                include 'pages/account-in.php';
+                break;
+
+            case 'register':
+                    include 'pages/account-up.php';
+                break;
+
+            case 'registerNew':
+            $firstname = filter_input(INPUT_POST, 'firstname');
+            $lastname = filter_input(INPUT_POST, 'lastname');
+            $email = filter_input(INPUT_POST, 'email');
+            $passphrase = filter_input(INPUT_POST, 'passphrase');
+            $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+            $verify_password = filter_input(INPUT_POST, 'verify_password', FILTER_SANITIZE_STRING);
+            // Let's get rid of the password from the Post Data
+            array_pop($_POST);
+    
+            $email = checkEmail($email);
+            $checkPassword = checkPassword($password, $verify_password);
+            $hash = hashEmail($email);
+            
+            if(!$checkPassword['success']){
+                $message = '<p class="notice">' .$checkPassword['message'] . '</p>';
+                include 'pages/account-up.php';
+                exit;
+            }
+    
+            $existingEmail = checkExistingEmail($email);
+    
+            $passphrase_match = verifyPassPhrase($passphrase);
+    
+            if ($existingEmail) {
+                $message = '<p class="notice">That email address already exists. Do you want to <a href="?f=account&a=login">login</a> instead?</p>';
+                include 'pages/account-up.php';
+                exit;
+            }
+    
+            if(!$passphrase_match){
+                $message = '<p class="notice">The registration passphrase is incorrect. Please try again.</p>';
+                include 'pages/account-up.php';
+                exit;
+            }
+    
+            if (empty($firstname) || empty($lastname) || empty($email) || empty($checkPassword) || empty($passphrase)) {
+                $message = '<p>Please provide information for all empty form fields.</p>';
+                include 'pages/account-up.php';
+                exit;
+            }
+            $password = password_hash($password, PASSWORD_DEFAULT);
+    
+            $regOutcome = regVisitor($firstname, $lastname, $email, $password, $hash);
+    
+            if ($regOutcome['success']) {
+                setcookie('firstname', $firstname, strtotime('+1 year'), '/');
+                $message = "<p>Thanks for registering $firstname. Please use your email and password to login.</p>";
+                include 'pages/account-in.php';
+                exit;
+            } else {
+                $message = "<p>Sorry $firstname, but the registration failed. Please try again.</p>";
+                include 'pages/account-up.php';
+                exit;
+            }
+            break;
+        case 'signin':
+            $email = filter_input(INPUT_POST, 'email');
+            $email = checkEmail($email);
+            $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+            $passwordCheck = checkPassword($password);
+
+            if (empty($email) || empty($passwordCheck)) {
+                $message = '<p class="notice">Please provide a valid email address and password.</p>';
+                include 'pages/account-in.php';
+                exit;
+            }
+
+            $clientData = getClient($email);
+            $hashCheck = password_verify($password, $clientData['clientpassword']);
+            if (!$hashCheck) {
+                $message = '<p class="notice">Please check your password and try again.</p>';
+                include 'pages/account-in.php';
+                exit;
+            }
+            $_SESSION['loggedin'] = TRUE;
+            setcookie('firstname', '', time() - 3600, '/');
+            array_pop($clientData);
+            $_SESSION['clientData'] = $clientData;
+            $_SESSION['message'] = "You have succesfully logged in!";
+            header('location: ?f=account&a=login');
+            unset($message);
+            unset($_SESSION['message']);
+            break;
+        case 'signOut':
+            unset($_SESSION);
+            session_destroy();
+            header('location: ?f=account&a=login');
+            break;
+        }
+        break;
     case 'recipes':
         switch ($action) {
             case 'home':
@@ -66,6 +169,10 @@ switch ($function){
                 header("Location: " . $relative_path);
                 break;
             case 'updateRecipeForm' :
+                if(!isset($_SESSION) || $_SESSION['clientData']['clientlevel'] < 1){
+                    header("Location: " . $relative_path);
+                    break;
+                }
                 $create_new = $_GET['rid'] ? false : true;
 
                 if(!$create_new)
@@ -122,11 +229,19 @@ switch ($function){
                 break;
 
             case 'addNewIngredient':
+                if(!isset($_SESSION) || $_SESSION['clientData']['clientlevel'] < 1){
+                    header("Location: " . $relative_path);
+                    break;
+                }
                 $result = insertNewIngredient($_POST);
                 echo json_encode($result);
                 break;
 
             case 'updateRecipe':
+                if(!isset($_SESSION) || $_SESSION['clientData']['clientlevel'] < 1){
+                    header("Location: " . $relative_path);
+                    break;
+                }
                 $result = updateRecipe($_POST);
                 if($result['success']){
                     $recipe_data = getRecipeById($result['id']);

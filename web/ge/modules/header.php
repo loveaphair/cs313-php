@@ -8,9 +8,9 @@
         <div class="pure-u-1-3">
             <div class="header-right">
                 <?php if(!isset($_SESSION['loggedin'])){ ?>
-                    <div class="header-icons"><a href="#"><i class="fas fa-user"></i><br><span style="font-size:70%">login</span></a></div>
+                    <div class="header-icons"><a href="?f=account&a=login"><i class="fas fa-user"></i><br><span style="font-size:70%">login</span></a></div>
                 <?php }else {?>
-                    <div class="header-icons"><a href="#"><i class="far fa-user"></i><br><span style="font-size:70%"><?=$_SESSION['first_name']?></span></a></div>
+                    <div class="header-icons"><a href="?f=account&a=login"><i class="far fa-user"></i><br><span style="font-size:70%"><?=$_SESSION['clientData']['clientfirstname']?></span></a></div>
                 <?php } ?>
             </div>
         </div>

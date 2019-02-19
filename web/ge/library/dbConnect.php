@@ -55,3 +55,7 @@ function get_db() {
 
 	return $db;
 }
+
+function dbConnect(){
+	return get_db();
+}
