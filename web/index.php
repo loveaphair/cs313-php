@@ -29,6 +29,7 @@
                     'description' => 'Project Final',
                     'href' => 'ge/'],
   ];
+  arsort($weeks);
   $week_display = '';
   foreach($weeks as $week){
     $week_display .= "<li class='week-display'><a href='{$week['href']}' target='_blank'><img src='{$week['img_src']}'></a><br><h4 class='caption'>{$week['caption']}</h4>{$week['description']}</li>";
@@ -51,7 +52,7 @@
     <h3 class="indent subtitle-text">Professional Student-Level Web Design</h3>
     <div class="content-area">
       <div class="intro-area">
-        <p>This is a website! Why does this website exist, you ask? It's an assignment! I may be a professional web developer, but when a professor says "build a website" I say, "will do, but what are the requirements?" And then I follow those requirements with exactness.</p>
+        <p>This is a website! Why does this website exist, you ask? It's an assignment! I may be a professional web developer, but when a professor says "build a website" I say, "will do, but what are the requirements?" And then I follow those requirements with exactness. Here is a link to <a href="https://github.com/loveaphair/cs313-php/tree/master/web" title="Kevin's sweet github">my github</a>.</p>
       </div>
       <h2 class="indent">ASSIGNMENTS</h2>
       <ul class="weeks-display">
