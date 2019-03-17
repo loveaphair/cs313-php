@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var server = require('../../nodejs/server.js');
+var server = require('./server');
 
 router.post('../views/index.ejs', function(req, res){
   var data = req.data;
