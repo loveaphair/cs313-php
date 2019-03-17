@@ -1,5 +1,4 @@
 {
-  "name": "nodeproject",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -20,7 +19,7 @@
     "node": "11.11.0"
   },
   "description": "This example is so cool.",
-  "main": "web.js",
+  "main": "app.js",
   "devDependencies": {},
   "keywords": [
     "example",
