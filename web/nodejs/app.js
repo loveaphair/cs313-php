@@ -1,7 +1,7 @@
 
 
 var http = require('http');
-// var server = require('./server');
+var server = require('./server');
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
