@@ -1,22 +1,27 @@
-
-module.exports.request = function onRequest(req, res) {
-	const NewsAPI = require('newsapi');
-	const newsapi = new NewsAPI('ae14a9ea6acf4d7d94b1e221351c1757');
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	// response.write('hi kevin');
-	newsapi.v2.topHeadlines({
+const NewsAPI = require('newsapi');
+const newsapi = new NewsAPI('ae14a9ea6acf4d7d94b1e221351c1757');
+newsapi.v2.topHeadlines({
 		sources: 'bbc-news,the-verge',
 		// q: 'bitcoin',
 		// category: 'business',
 		language: 'en',
 		// country: 'us'
 	  }).then(response => {
-		  res.write(processHeadlines(response));
-	  }).then(response => {
-		  res.end();
+		module.exports.newsHeadlines = response;
 	  });
+
+module.exports = {
+	selectSource: function (res, source){
+		newsapi.v2.topHeadlines({
+			sources: source,
+			language: 'en',
+		}).then(response => {
+			res.send(response);
+		});
+	}
 }
 
-function processHeadlines(data){
-	return JSON.stringify(data.totalResults);
-}
+
+// function processHeadlines(data){
+// 	return JSON.stringify(data.totalResults);
+// }
