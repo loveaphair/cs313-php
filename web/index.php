@@ -28,6 +28,10 @@
                     'caption' => 'Week 7 Individual Assignment',
                     'description' => 'Project Final',
                     'href' => 'ge/'],
+    'week10' => ['img_src' => 'images/week10.png',
+                    'caption' => 'Week 10 Individual Assignment',
+                    'description' => 'Phase 1 - node.js',
+                    'href' => 'https://secret-scrubland-30058.herokuapp.com'],
   ];
   arsort($weeks);
   $week_display = '';
