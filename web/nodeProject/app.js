@@ -1,9 +1,12 @@
+const cool = require('cool-ascii-faces');
+const PORT = process.env.PORT || 5000
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var headlines = require('../nodejs/server.js'); 
+
 
 var indexRouter = require('./routes/index');
 
@@ -20,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.get('/cool', (req, res) => res.send(cool()))
 app.get('/sources', function(req, res){
   var source = req.query.source;
   headlines.selectSource(res, source)
