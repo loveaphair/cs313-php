@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/nodeProject', indexRouter);
 app.get('/cool', (req, res) => res.send(cool()))
 app.get('/sources', function(req, res){
   var source = req.query.source;
